@@ -1,0 +1,43 @@
+:root {
+  --primary-color: #0a3871;
+  --background-color: #e1e4fa;
+  --secondary-color: #e9dbf6;
+  --tertiary-color: #fae277;
+  --secondary-font: "Montserrat", sans-serif;
+}
+body {
+  background-color: var(--background-color);
+}
+/* header */
+header {
+  padding: 1vh;
+}
+.imgLogo {
+  width: 12%;
+  height: 4.8%;
+}
+/* Botones */
+.btnEncriptar {
+  background-color: var(--primary-color);
+  width: 328px;
+  height: 67px;
+  border-radius: 24rem;
+  color: var(--background-color);
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  border: none;
+}
+.btnDesencriptar {
+  background-color: var(--secondary-color);
+  width: 328px;
+  height: 67px;
+  border-radius: 24rem;
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  border: none;
+}
+.btnED {
+  display: flex;
+  justify-content: center;
+}
