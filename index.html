@@ -17,21 +17,22 @@
       <img class="imgLogo" src="/img/Logo.png" alt="Logo de alaura" />
     </header>
     <div class="divBody">
-      <form action="">
+      <div>
         <input
           class="inputIngresaTexto"
           type="text"
           placeholder="Ingresa el texto aquí"
         />
-        <div class="btnED">
+        <div class="divBtn">
           <button class="btnEncriptar" type="button">Encriptar</button>
           <button class="btnDesencriptar">Desencriptar</button>
         </div>
-      </form>
-
-      <div class="inputEncriptado" contenteditable="true" placeholder="ejemplo">
-        <!-- <input class="inputEncriptado" type="text" /> -->
+      </div>
+      <div class="inputEncriptado" contenteditable="true">
         <img class="imgMuneco" src="/img/Muneco.png" alt="" />
+        <span class="spanDivEncriptado">
+          <strong>Ningún mensaje fue encontrado.</strong>
+        </span>
       </div>
     </div>
     <script src="/js/main.js"></script>

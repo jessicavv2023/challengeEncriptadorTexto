@@ -2,7 +2,7 @@
   --primary-color: #0a3871;
   --background-color: #e1e4fa;
   --secondary-color: #e9dbf6;
-  --tertiary-color: #fae277;
+  --tertiary-color: #fbf2c6;
   --secondary-font: "Montserrat", sans-serif;
 }
 body {
@@ -34,7 +34,7 @@ header {
   border: none;
   color: var(--primary-color);
   font-family: var(--secondary-font);
-  font-size: large;
+  font-size: xx-large;
   padding: 2%;
   border-radius: 32px;
 }
@@ -64,7 +64,7 @@ header {
   font-weight: 500;
   border: none;
 }
-.btnED {
+.divBtn {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -77,8 +77,22 @@ header {
   width: 55vh;
   height: 79vh;
   margin-right: 3%;
+  padding: 10px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.inputEncriptado:focus {
+  outline: none;
+}
+.spanDivEncriptado {
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: x-large;
+  display: contents;
+  justify-content: center;
 }
 .imgMuneco {
-  position: relative;
-  margin: auto;
+  width: -webkit-fill-available;
 }
