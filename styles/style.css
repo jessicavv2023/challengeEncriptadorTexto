@@ -16,6 +16,33 @@ header {
   width: 12%;
   height: 4.8%;
 }
+/* Div que contiene a form y el texto incriptado  */
+
+.divBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Input Ingresa texto */
+.inputIngresaTexto {
+  background-color: var(--background-color);
+  width: 90vb;
+  height: 70vb;
+  margin: 1%;
+  border: none;
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: large;
+  padding: 2%;
+  border-radius: 32px;
+}
+.inputIngresaTexto:focus {
+  background-color: var(--tertiary-color);
+  outline: none;
+}
+
 /* Botones */
 .btnEncriptar {
   background-color: var(--primary-color);
@@ -40,4 +67,18 @@ header {
 .btnED {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+/* Input texto encriptado  */
+.inputEncriptado {
+  background-color: var(--tertiary-color);
+  border-radius: 32px;
+  width: 55vh;
+  height: 79vh;
+  margin-right: 3%;
+}
+.imgMuneco {
+  position: relative;
+  margin: auto;
 }
