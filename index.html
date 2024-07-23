@@ -18,14 +18,21 @@
       <img class="imgLogo" src="/img/Logo.png" alt="Logotipo de alura" />
     </header>
     <div class="divGlobal">
-      <div class="divBtn">
-        <input class="inputIngresaTexto" type="text" id="txtEncriptado" />
-        <button class="btnEncriptar" type="button" id="btnEncriptado">
-          Encriptar
-        </button>
-        <button class="btnDesencriptar" type="button" id="btnDesencriptado">
-          Desencriptar
-        </button>
+      <div class="divInputBtns">
+        <input
+          class="inputIngresaTexto"
+          type="text"
+          id="txtEncriptado"
+          placeholder="Ingrese el texto aquí"
+        />
+        <div class="divBtns">
+          <button class="btnEncriptar" type="button" id="btnEncriptado">
+            Encriptar
+          </button>
+          <button class="btnDesencriptar" type="button" id="btnDesencriptado">
+            Desencriptar
+          </button>
+        </div>
       </div>
       <div class="divTextarea">
         <textarea
@@ -35,7 +42,8 @@
           cols="30"
           rows="10"
         ></textarea>
-        <button type="button" id="btnCopiar">Copiar</button>
+        <img class="imgMuneco" src="/img/Muneco.png" alt="" />
+        <button class="btnCopiar" type="button" id="btnCopiar">Copiar</button>
       </div>
     </div>
     <!-- scripts  -->
@@ -46,6 +54,9 @@
       btnDescencriptar.onclick = descencriptador;
       var btnCopiar = document.querySelector("#btnCopiar");
       btnCopiar.onclick = btnFCopiar;
+      // para ocultar la img
+      var txtDesencriptado = document.getElementById("txtDesencriptado");
+      txtDesencriptado.addEventListener("input", toggleMuneco);
     </script>
   </body>
 </html>
