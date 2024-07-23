@@ -16,9 +16,9 @@ header {
   width: 12%;
   height: 4.8%;
 }
-/* Div que contiene a form y el texto incriptado  */
+/* Div que contiene a form y el texto incriptado   */
 
-.divBody {
+.divGlobal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,8 +27,8 @@ header {
 
 /* Input Ingresa texto */
 .inputIngresaTexto {
-  background-color: var(--background-color);
-  width: 90vb;
+  background-color: aqua;
+  width: 80vb;
   height: 70vb;
   margin: 1%;
   border: none;
@@ -66,12 +66,12 @@ header {
 }
 .divBtn {
   display: flex;
-  justify-content: center;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: flex-end;
 }
 /* Input texto encriptado  */
-.inputEncriptado {
+.textareaDesencriptado {
   background-color: var(--tertiary-color);
   border-radius: 32px;
   width: 55vh;
@@ -83,16 +83,18 @@ header {
   justify-content: center;
 }
 
-.inputEncriptado:focus {
+.textareaDesencriptado:focus {
   outline: none;
 }
-.spanDivEncriptado {
+.divTextarea {
   color: var(--primary-color);
   font-family: var(--secondary-font);
   font-size: x-large;
   display: contents;
   justify-content: center;
 }
-.imgMuneco {
-  width: -webkit-fill-available;
+
+/* Para ocualtar el btn de copiar  */
+#btnCopiar {
+  display: none;
 }
