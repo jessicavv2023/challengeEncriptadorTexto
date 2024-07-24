@@ -3,6 +3,7 @@
   --background-color: #e1e4fa;
   --secondary-color: #e9dbf6;
   --tertiary-color: #fbf2c6;
+  --primary-font: "Onest", sans-serif;
   --secondary-font: "Montserrat", sans-serif;
 }
 body {
@@ -11,12 +12,22 @@ body {
 /* header */
 header {
   padding: 1vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .imgLogo {
   width: 12%;
-  height: 4.8%;
+  position: relative;
+  right: 27rem;
 }
-/* Div que contiene a form y el texto incriptado */
+.title {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-size: xx-large;
+  display: contents;
+}
+/* Div que contiene a form y textarea incriptado */
 .divGlobal {
   display: flex;
   flex-direction: row;
@@ -48,12 +59,27 @@ header {
   background-color: var(--tertiary-color);
   outline: none;
 }
+/* Icono de circulo  */
 
-/* Botones */
-.divBtns {
+.icon-text {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  padding: 10px;
 }
+
+.icon-text i {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.icon-text span {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+}
+
 .btnEncriptar,
 .btnDesencriptar {
   background-color: var(--primary-color);
@@ -77,13 +103,15 @@ header {
   font-weight: 500;
   border: none;
 }
+
+/* Input texto encriptado  */
 .pTextareaa {
   font-family: var(--secondary-font);
   font-weight: 400;
   font-size: x-large;
   pointer-events: none;
+  margin: -45%;
 }
-/* Input texto encriptado  */
 .txtareaDesencriptado {
   border-radius: 32px;
   width: 30vw;
@@ -127,4 +155,40 @@ header {
   justify-content: space-evenly;
   align-items: inherit;
   font-size: x-large;
+}
+/* Punto de quiebre para dispositivos */
+@media (min-width: 1024px) {
+  .pTextareaa {
+    font-size: medium;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .divGlobal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pTextareaa {
+    font-size: smaller;
+  }
+
+  .divBtns {
+    display: inline-grid;
+    margin: 2%;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .divGlobal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pTextareaa {
+    font-size: smaller;
+  }
+
+  .divBtns {
+    display: inline-grid;
+    margin: 2%;
+  }
 }
