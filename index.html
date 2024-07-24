@@ -36,13 +36,16 @@
       </div>
       <div class="divTextarea">
         <textarea
-          class="textareaDesencriptado"
+          class="txtareaDesencriptado"
           name="resultado"
           id="txtDesencriptado"
           cols="30"
           rows="10"
         ></textarea>
         <img class="imgMuneco" src="/img/Muneco.png" alt="" />
+        <p class="pTextareaa" id="pTextareaa">
+          <strong>Ningún mensaje fue encontrado</strong>
+        </p>
         <button class="btnCopiar" type="button" id="btnCopiar">Copiar</button>
       </div>
     </div>
@@ -57,6 +60,9 @@
       // para ocultar la img
       var txtDesencriptado = document.getElementById("txtDesencriptado");
       txtDesencriptado.addEventListener("input", toggleMuneco);
+      // para ocultar el texto
+      var pTextarea = document.getElementById("pTextareaa");
+      pTextarea.addEventListener("input", parrafoTextarea);
     </script>
   </body>
 </html>

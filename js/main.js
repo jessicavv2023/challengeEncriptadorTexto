@@ -1,60 +1,61 @@
-// Función existente de encriptar
-function encriptar() {
-  var textoEncriptado = document
-    .getElementById("txtEncriptado")
-    .value.toLowerCase();
-
-  var encriptador = textoEncriptado.replace(/e/gim, "enter");
-  encriptador = encriptador.replace(/i/gim, "imes");
-  encriptador = encriptador.replace(/a/gim, "ai");
-  encriptador = encriptador.replace(/u/gim, "ufat");
-  encriptador = encriptador.replace(/o/gim, "ober");
-
-  var txtDesencriptado = document.getElementById("txtDesencriptado");
-  txtDesencriptado.value = encriptador;
-  document.getElementById("btnCopiar").style.display = "show";
-  document.getElementById("btnCopiar").style.display = "inherit";
-
-  toggleMuneco(); // Llamar a la función para ocultar la imagen
-}
-
-// Función existente de desencriptar
-function descencriptador() {
-  var textoEncriptado = document
-    .getElementById("txtEncriptado")
-    .value.toLowerCase();
-
-  var encriptador = textoEncriptado.replace(/enter/gim, "e");
-  encriptador = encriptador.replace(/imes/gim, "i");
-  encriptador = encriptador.replace(/ai/gim, "a");
-  encriptador = encriptador.replace(/ufat/gim, "u");
-  encriptador = encriptador.replace(/ober/gim, "o");
-
-  var txtDesencriptado = document.getElementById("txtDesencriptado");
-  txtDesencriptado.value = encriptador;
-
-  toggleMuneco(); // Llamar a la función para ocultar la imagen
-}
-
-// Función existente de copiar
-function btnFCopiar() {
-  var texto = document.querySelector("#txtDesencriptado");
-  texto.select();
-  document.execCommand("copy");
-}
-
-// Nueva función para mostrar/ocultar imagen
-function toggleMuneco() {
+document.addEventListener("DOMContentLoaded", function () {
+  var btnEncriptar = document.querySelector("#btnEncriptado");
+  var btnDesencriptar = document.querySelector("#btnDesencriptado");
+  var btnCopiar = document.querySelector("#btnCopiar");
   var txtDesencriptado = document.getElementById("txtDesencriptado");
   var imgMuneco = document.querySelector(".imgMuneco");
-  if (txtDesencriptado.value.trim() !== "") {
-    imgMuneco.style.display = "none";
-  } else {
-    imgMuneco.style.display = "block";
-  }
-}
+  var pTextarea = document.querySelector("#pTextareaa");
 
-// Añadir evento para ocultar imagen cuando textarea tenga contenido
-document
-  .getElementById("txtDesencriptado")
-  .addEventListener("input", toggleMuneco);
+  btnEncriptar.onclick = encriptar;
+  btnDesencriptar.onclick = desencriptar;
+  btnCopiar.onclick = copiar;
+  txtDesencriptado.addEventListener("input", toggleMuneco);
+
+  function encriptar() {
+    var textoEncriptado = document
+      .getElementById("txtEncriptado")
+      .value.toLowerCase();
+    var encriptador = textoEncriptado
+      .replace(/e/gim, "enter")
+      .replace(/i/gim, "imes")
+      .replace(/a/gim, "ai")
+      .replace(/u/gim, "ufat")
+      .replace(/o/gim, "ober");
+    txtDesencriptado.value = encriptador;
+    document.getElementById("btnCopiar").style.display = "inherit";
+    toggleMuneco();
+  }
+
+  function desencriptar() {
+    var textoEncriptado = document
+      .getElementById("txtEncriptado")
+      .value.toLowerCase();
+    var desencriptador = textoEncriptado
+      .replace(/enter/gim, "e")
+      .replace(/imes/gim, "i")
+      .replace(/ai/gim, "a")
+      .replace(/ufat/gim, "u")
+      .replace(/ober/gim, "o");
+    txtDesencriptado.value = desencriptador;
+    toggleMuneco();
+  }
+
+  function copiar() {
+    var texto = document.querySelector("#txtDesencriptado");
+    texto.select();
+    document.execCommand("copy");
+  }
+
+  function toggleMuneco() {
+    if (txtDesencriptado.value.trim() !== "") {
+      imgMuneco.style.display = "none";
+      pTextarea.style.display = "none";
+    } else {
+      imgMuneco.style.display = "block";
+      pTextarea.style.display = "block";
+    }
+  }
+
+  // Inicialización para mostrar la imagen y el texto al cargar la página
+  toggleMuneco();
+});
