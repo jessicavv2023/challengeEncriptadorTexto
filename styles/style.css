@@ -157,11 +157,26 @@ header {
   font-size: x-large;
 }
 /* Punto de quiebre para dispositivos */
-@media (min-width: 1024px) {
+@media (min-width: 320px) and (max-width: 768px) {
+  .divGlobal {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .pTextareaa {
-    font-size: medium;
+    font-size: smaller;
+  }
+
+  .divBtns {
+    display: inline-grid;
+    margin: 2%;
+  }
+  .txtareaDesencriptado {
+    width: fit-content;
+    height: 32vw;
   }
 }
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .divGlobal {
     flex-direction: column;
@@ -176,19 +191,31 @@ header {
     display: inline-grid;
     margin: 2%;
   }
+  .imgLogo {
+    right: 7rem;
+  }
+  .inputIngresaTexto {
+    width: 190%;
+  }
 }
-@media (min-width: 320px) and (max-width: 768px) {
-  .divGlobal {
-    flex-direction: column;
-    align-items: center;
-  }
-
+@media (min-width: 1024px) {
   .pTextareaa {
-    font-size: smaller;
+    font-size: medium;
   }
-
   .divBtns {
-    display: inline-grid;
-    margin: 2%;
+    display: inline-table;
+  }
+  .imgLogo {
+    right: 13rem;
+  }
+}
+@media (min-width: 1440px) {
+  .imgLogo {
+    right: 26rem;
+  }
+}
+@media (min-width: 2560px) {
+  .imgLogo {
+    right: 56rem;
   }
 }
