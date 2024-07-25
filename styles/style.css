@@ -2,7 +2,7 @@
   --primary-color: #0a3871;
   --background-color: #e1e4fa;
   --secondary-color: #e9dbf6;
-  --tertiary-color: #fbf2c6;
+  --tertiary-color: #fbf2c6c9;
   --primary-font: "Onest", sans-serif;
   --secondary-font: "Montserrat", sans-serif;
 }
@@ -60,7 +60,9 @@ header {
 .inputIngresaTexto:focus {
   background-color: var(--tertiary-color);
   outline: none;
+  box-shadow: 2px 2px 20px #0a3871;
 }
+
 /* Icono de circulo  */
 
 .icon-text {
@@ -94,6 +96,7 @@ header {
   border: none;
   margin: 5px;
   font-size: x-large;
+  box-shadow: 2px 2px 9px #0a3871;
 }
 .btnDesencriptar {
   background-color: var(--secondary-color);
@@ -127,6 +130,7 @@ header {
 }
 .txtareaDesencriptado:focus {
   outline: none;
+  background-color: var(--tertiary-color);
 }
 
 .divTextarea {
@@ -139,8 +143,6 @@ header {
 .imgMuneco {
   position: fixed;
   width: 25%;
-  /* top: 10px; */
-  /* right: 10px; */
   pointer-events: none;
   margin: 8%;
 }
@@ -159,6 +161,7 @@ header {
   justify-content: space-evenly;
   align-items: inherit;
   font-size: x-large;
+  box-shadow: 2px 2px 9px #0a3871;
 }
 /* Punto de quiebre para dispositivos */
 @media (min-width: 320px) and (max-width: 768px) {

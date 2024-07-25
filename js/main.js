@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .replace(/u/gim, "ufat")
       .replace(/o/gim, "ober");
     txtDesencriptado.value = encriptador;
-    document.getElementById("btnCopiar").style.display = "inherit";
+    // document.getElementById("btnCopiar").style.display = "inherit";
     toggleMuneco();
   }
 
@@ -50,9 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (txtDesencriptado.value.trim() !== "") {
       imgMuneco.style.display = "none";
       pTextarea.style.display = "none";
+      btnCopiar.style.display = "block";
     } else {
       imgMuneco.style.display = "block";
       pTextarea.style.display = "block";
+      btnCopiar.style.display = "none";
     }
   }
 
