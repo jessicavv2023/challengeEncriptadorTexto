@@ -112,6 +112,7 @@ header {
 /* Input texto encriptado  */
 .pTextareaa {
   font-family: var(--secondary-font);
+  color: var(--primary-color);
   font-weight: 400;
   font-size: x-large;
   pointer-events: none;
@@ -175,7 +176,7 @@ header {
     font-size: large;
   }
   .pTextareaa {
-    font-size: smaller;
+    font-size: xx-small;
     margin-top: -121px;
   }
   .divBtns {
@@ -189,7 +190,7 @@ header {
     font-size: large;
   }
   .imgMuneco {
-    margin-top: 51px;
+    margin-top: 52px;
     width: 30%;
   }
   .inputIngresaTexto {
@@ -208,7 +209,7 @@ header {
 
 @media (min-width: 375px) and (max-width: 425px) {
   .pTextareaa {
-    margin-top: -145px;
+    margin-top: -135px;
   }
   .imgMuneco {
     margin-top: 61px;
@@ -227,7 +228,7 @@ header {
   .pTextareaa {
     font-size: large;
     position: relative;
-    margin-top: -50px;
+    margin-top: -68px;
   }
   .icon-text {
     padding: 0%;
@@ -245,7 +246,7 @@ header {
 }
 @media (min-width: 1024px) {
   .pTextareaa {
-    font-size: medium;
+    font-size: x-small;
   }
   .divBtns {
     display: inline-table;
@@ -271,5 +272,8 @@ header {
 @media (min-width: 2560px) {
   .imgLogo {
     right: 56rem;
+  }
+  .pTextareaa {
+    font-size: x-large;
   }
 }
